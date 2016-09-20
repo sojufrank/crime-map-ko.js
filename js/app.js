@@ -3,7 +3,7 @@ $('#dropDownHide').hide();
 var app = function(){
 	$.getJSON('https://data.seattle.gov/resource/7ais-f98f.json', function(data) {
 		data.shift();
-		console.log(data);
+		//console.log(data);
 		$('#loader-div').hide();
 		$('#dropDownHide').show();
 		//console.log("got data from api");
