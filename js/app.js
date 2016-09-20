@@ -71,12 +71,14 @@ var app = function(){
 			    		self.mapData().forEach(function(obj){
 			    			if(obj.infoWindow){obj.infoWindow.close()}
 			    		});
+			    		var date = obj.date_reported;
+			    		date = date.substring(5,7)+'/'+date.substring(8,10)+'/'+date.substring(0,4);
 			    		obj.infoWindow = new google.maps.InfoWindow({
 			    			content: '<div class="infoWindow">'+
 			    			'<div class="iw-label">offense type : </div>'+
 			    			'<div class="iw-content">'+obj.offense_type.split('-').join(' ')+'</div>'+
 			    			'<div class="iw-label">date : '+
-			    			'<span class="iw-content">'+obj.date_reported.substring(0,10)+'</span></div>'+
+			    			'<span class="iw-content">'+date+'</span></div>'+
 			    			'<div class="iw-label">time : '+
 			    			'<span class="iw-content">'+obj.date_reported.substring(11,16)+'</span></div>'+
 			    			
