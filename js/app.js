@@ -77,7 +77,7 @@ var app = function(){
 			    			content: '<div class="infoWindow">'+
 			    			'<div class="iw-content">'+obj.offense_type.split('-').join(' ')+'</div>'+
 			    			'<div class="">'+date+'</div>'+
-			    			'<div class="iw-label"><i class="fa fa-spinner fa-spin fa-fw"></i>'+
+			    			'<div class="iw-label"><i class="fa fa-clock-o"></i>'+
 			    			'<span class="iw-content"> '+obj.date_reported.substring(11,16)+'</span></div>'+
 			    			
 			    			'</div>',
