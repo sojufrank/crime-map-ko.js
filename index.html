@@ -45,11 +45,11 @@
     <table id="dropDownHide">
         <tr>
             <td class="select-text">select offense: </td>
-            <td><select class="select-td" data-bind="value: selectCrime, options: crimeDropDown, click: test2, event: {touchend: test2}">crime</select></td>
+            <td><select class="select-td" data-bind="value: selectCrime, options: crimeDropDown, event: {change: test2}">crime</select></td>
         </tr>
         <tr>
             <td class="select-text">select date: </td>
-            <td><select class="select-td" data-bind="value: selectDate, options: dateDropDown, click: test, event: {touchend: test}">date</select></td>
+            <td><select class="select-td" data-bind="value: selectDate, options: dateDropDown, event: {change: test}">date</select></td>
         </tr>
     </table>
 
