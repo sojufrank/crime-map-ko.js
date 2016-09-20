@@ -1,5 +1,10 @@
 var map;
 $('#dropDownHide').hide();
+
+$( document ).ready(function() {
+    app()
+});
+
 var app = function(){
 	$.getJSON('https://data.seattle.gov/resource/7ais-f98f.json', function(data) {
 		data.shift();
