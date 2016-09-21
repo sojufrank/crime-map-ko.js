@@ -8,10 +8,10 @@ $( document ).ready(function() {
 var app = function(){
 	$.getJSON('https://data.seattle.gov/resource/7ais-f98f.json', function(data) {
 		data.shift();
-		//console.log(data);
+		console.log(data);
+
 		$('#loader-div').hide();
 		$('#dropDownHide').show();
-		//console.log("got data from api");
 
 		ko.applyBindings(new ViewModel(data));
 
@@ -73,12 +73,14 @@ var app = function(){
 			    		});
 			    		var date = obj.date_reported;
 			    		date = date.substring(5,7)+'/'+date.substring(8,10)+'/'+date.substring(0,4);
+			    		
 			    		obj.infoWindow = new google.maps.InfoWindow({
 			    			content: '<div class="infoWindow">'+
-			    			'<div class="iw-content">'+obj.offense_type.split('-').join(' ')+'</div>'+
-			    			'<div class="">'+date+'</div>'+
-			    			'<div class="iw-label"><i class="fa fa-clock-o"></i>'+
-			    			'<span class="iw-content"> '+obj.date_reported.substring(11,16)+'</span></div>'+
+			    			'<div class="iw-offense">'+obj.offense_type.split('-').join(' ')+'</div>'+
+			    			'<div class="iw-address">'+obj.hundred_block_location+'</div>'+
+			    			'<div class="iw-date">'+date+'</div>'+
+			    			'<div><i class="fa fa-clock-o"></i>'+
+			    			'<span class="iw-time"> '+obj.date_reported.substring(11,16)+'</span></div>'+
 			    			
 			    			'</div>',
 			    		});

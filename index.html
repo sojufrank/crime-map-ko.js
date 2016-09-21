@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Seattle Crime Map</title>
+        <script src="HTTPS://maps.googleapis.com/maps/api/js?key=AIzaSyAFDSXEp9yQrC-X1L-smboTPORC5zMgr0A" async defer></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -13,7 +14,7 @@
             height:100%;
         }
         #map {
-            height:80%;
+            height:93%;
         }
         #loader-div {
             align:center;
@@ -28,7 +29,8 @@
             color:black;
         }
         #dropDownHide{
-            margin-left:20px;
+            margin:auto;
+            width:50%;            
         }
         .select-td{
             margin-left:10px;
@@ -36,24 +38,24 @@
         .select-text{
             color:white;
             opacity:97;
-            font-size:1.1em;
         }
 
 
     </style>
 </head>
 <body>
-    <table id="dropDownHide">
-        <tr>
-            <td class="select-text">select offense: </td>
-            <td><select class="select-td" data-bind="value: selectCrime, options: crimeDropDown, event: {change: test2}">crime</select></td>
-        </tr>
-        <tr>
-            <td class="select-text">select date: </td>
-            <td><select class="select-td" data-bind="value: selectDate, options: dateDropDown, event: {change: test}">date</select></td>
-        </tr>
-    </table>
-
+    <div id="dropDownHide">
+        <table>
+            <tr>
+                <td class="select-text">select offense: </td>
+                <td><select class="select-td" data-bind="value: selectCrime, options: crimeDropDown, event: {change: test2}">crime</select></td>
+            </tr>
+            <tr>
+                <td class="select-text">select date: </td>
+                <td><select class="select-td" data-bind="value: selectDate, options: dateDropDown, event: {change: test}">date</select></td>
+            </tr>
+        </table>
+    </div>
     <div id="loader-div">
             <h1 class="loader-title">Loading Data from seattle.data.gov</h1>
             <h5>takes up to 15 seconds</h5>
@@ -63,8 +65,6 @@
     </div>
 
     <div id="map"></div>
-
-    <script src="HTTPS://maps.googleapis.com/maps/api/js?key=AIzaSyAFDSXEp9yQrC-X1L-smboTPORC5zMgr0A" async defer></script>
     <script src="js/lib/knockout-3.4.0.js"></script>
     <script src="js/lib/jquery-3.1.0.min.js"></script>
     <script src="js/setIcon.js"></script>
