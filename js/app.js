@@ -98,13 +98,13 @@ var app = function(){
 		this.selectCrime = ko.observable();
 
 		this.test = function(){
-			console.log(this.selectDate());
+			//console.log(this.selectDate());
 			this.mapClear();
 			self.dropDownParse();
 			self.makeMarker();
 		}
 		this.test2 = function(){
-			console.log(this.selectCrime());
+			//console.log(this.selectCrime());
 			this.mapClear();
 			self.dropDownParse();
 			self.makeMarker();
