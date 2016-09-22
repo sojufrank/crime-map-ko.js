@@ -78,10 +78,8 @@ var app = function(){
 			    			content: '<div class="infoWindow">'+
 			    			'<div class="iw-offense">'+obj.offense_type.split('-').join(' ')+'</div>'+
 			    			'<div class="iw-address">'+obj.hundred_block_location+'</div>'+
-			    			'<div class="iw-date">'+date+'</div>'+
-			    			'<div><i class="fa fa-clock-o"></i>'+
+			    			'<div class="iw-date">'+date+' <i class="fa fa-clock-o"></i>'+
 			    			'<span class="iw-time"> '+obj.date_reported.substring(11,16)+'</span></div>'+
-			    			
 			    			'</div>',
 			    		});
 			    		obj.infoWindow.open(map, obj.marker);
