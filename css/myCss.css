@@ -1,0 +1,38 @@
+html, body {
+    background-color:black;
+    height:100%;
+}
+#map {
+    height:90%;
+}
+#loader-div {
+    align:center;
+    text-align:center;
+    color:white;
+    opacity:.8;
+}
+.infoWindow{
+    text-align:center;
+    color:black;
+}
+.iw-offense{
+    font-size:1.3em;
+    font-weight:500;
+}
+.iw-date{
+    opacity:.6;
+}
+.fa-clock-o{
+    margin-left:10px;
+}
+#dropDownHide{
+    margin-left: 50px;         
+}
+.select-td{
+    margin-left:10px;
+}
+.select-text{
+    color:white;
+    opacity:97;
+    font-size:1.1em;
+}

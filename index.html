@@ -8,59 +8,18 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <style>
-        html, body {
-            background-color:black;
-            height:100%;
-        }
-        #map {
-            height:90%;
-        }
-        #loader-div {
-            align:center;
-            text-align:center;
-            color:white;
-            opacity:.8;
-        }
-        .infoWindow{
-            text-align:center;
-            color:black;
-        }
-        .iw-offense{
-            font-size:1.3em;
-            font-weight:500;
-        }
-        .iw-date{
-            opacity:.6;
-        }
-        .fa-clock-o{
-            margin-left:10px;
-        }
-        #dropDownHide{
-            margin-left: 50px;         
-        }
-        .select-td{
-            margin-left:10px;
-        }
-        .select-text{
-            color:white;
-            opacity:97;
-            font-size:1.1em;
-        }
-
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/myCss.css">
 </head>
 <body>
     <div id="dropDownHide">
         <table>
             <tr>
                 <td class="select-text">select offense: </td>
-                <td><select class="select-td" data-bind="value: selectCrime, options: crimeDropDown, event: {change: test2}">crime</select></td>
+                <td><select class="select-td" data-bind="value: selectCrime, options: crimeDropDown, event: {change: mapMarkerUpdate}">crime</select></td>
             </tr>
             <tr>
                 <td class="select-text">select date: </td>
-                <td><select class="select-td" data-bind="value: selectDate, options: dateDropDown, event: {change: test}">date</select></td>
+                <td><select class="select-td" data-bind="value: selectDate, options: dateDropDown, event: {change: mapMarkerUpdate}">date</select></td>
             </tr>
         </table>
     </div>
