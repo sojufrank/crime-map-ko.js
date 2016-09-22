@@ -12,12 +12,13 @@ html, body {
     opacity:.8;
 }
 .infoWindow{
+    font-family: 'Open Sans', sans-serif;
     text-align:center;
     color:black;
 }
 .iw-offense{
+    font-family: 'Lora', serif;
     font-size:1.3em;
-    font-weight:500;
 }
 .iw-date{
     opacity:.6;
